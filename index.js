@@ -167,10 +167,15 @@ function createFAQItem(question, answer) {
 }
 
 function createServiceItem(imageURL, title, description, linkText, linkHref) {
+  // 1 Apuntar al nodo padre (apuntamos a ese selector con querySelector y a su tipo)
   const servicesList = document.querySelector(".services-list");
+  // 2 Crear div en el documento
   const serviceItemContainer = document.createElement("div");
+  // 3 Agregar la clase de css
   serviceItemContainer.classList.add("service-item");
 
+
+  // 4 Agregar una imagen con el scr y que se añada al serviceItemContainer
   const imageElement = document.createElement("img");
   imageElement.setAttribute("src", imageURL);
   serviceItemContainer.append(imageElement);
